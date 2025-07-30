@@ -1,0 +1,262 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  }
+
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #444;
+  }
+
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.3s;
+  }
+  
+.dropdown-toggle {
+  background-color: #27c61b;
+  color: white;
+  padding: 12px 20px;
+  margin: 0 auto; /* remove margem superior e inferior */
+  border-radius: 0 0 12px 12px; /* encosta perfeitamente na imagem arredondada */
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #1ea016;
+}
+
+
+  .form-group input[type="text"]:focus {
+    border-color: #27c61b;
+    outline: none;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .checkbox-group input {
+    margin-right: 10px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #27c61b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .btn-submit:hover {
+    background-color: #20a216;
+  }
+
+  .section-video {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+  }
+
+.section-video img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 8px; /* espaçamento suave entre imagem e botão */
+}
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 32px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+  }
+
+  .divider {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #27c61b, #0e8614);
+    margin: 40px 0;
+  }
+
+  .expired-message {
+    max-width: 600px;
+    margin: 80px auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+  }
+</style>
+
+<!-- SECTION 1 -->
+<div id="section1">
+  <form id="congressForm" class="form-container">
+    <h2>Inscreva-se para Assistir</h2>
+
+    <div class="form-group">
+      <label for="name">Nome completo:</label>
+      <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+    </div>
+
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" required placeholder="Digite um CPF válido" title="Digite um CPF válido">
+</div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms" required>
+      <label for="terms">Concordo com os termos de uso e privacidade</label>
+    </div>
+
+    <button type="submit" class="btn-submit">Assistir Congresso</button>
+
+    <!-- Rodapé com aviso legal -->
+    <p style="margin-top: 24px; font-size: 13px; color: #a00; background-color: #fff4f4; padding: 12px; border-radius: 8px; border: 1px solid #faa;">
+      ⚠️ <strong>ATENÇÃO:</strong> Não compartilhe este link. O compartilhamento não autorizado pode acarretar multa devido ao direito de uso de imagem, conforme previsto na LGPD (Lei Geral de Proteção de Dados).
+    </p>
+  </form>
+</div>
+
+<!-- SECTION 2 -->
+<div id="section2" class="section-video" style="display:none;">
+  <div id="contentArea">
+    <!-- DROPDOWN 1: I CBAR -->
+     <img src="https://static.wixstatic.com/media/7f5efc_29ae73bbaf514bc592f8a2950aefc3a5~mv2.jpg" alt="Imagem inicial">
+	 <button class="dropdown-toggle" data-label="I CBAR" onclick="toggleDropdown('cbari', this)">▶ I CBAR</button>
+    <div id="cbari" style="display: none;">
+     
+<br><br>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/OLdsN7S1zuA" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/KJE6OPJS3A8" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/YWC2fhRqJcY" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/V7kVYnbQOjQ" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/1PdrgEQnSA8" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/voESQaZ64TY" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/LiiHbZCEgm8" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Wu5ffWsl3TA" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aDp95Gs8E2k" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/PIHvhr3BjnM" allowfullscreen></iframe></div>
+    </div>
+
+<br><br><br><br><br><br><br>
+
+<!-- DROPDOWN 2: II CBAR -->
+    
+	<img src="https://static.wixstatic.com/media/7f5efc_ae723e836c584381b8c887b9df8bff11~mv2.jpg" alt="Divisor">
+	<button class="dropdown-toggle" data-label="II CBAR" onclick="toggleDropdown('cbar2', this)">▶ II CBAR</button>
+    <div id="cbar2" style="display: none;">
+<br><br>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wEmQ0Mjv_v4" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/2DL7vC-k384" allowfullscreen></iframe></div>
+    </div>
+  </div>
+
+  <!-- Mensagem de expiração -->
+  <div id="expiredMessage" class="expired-message" style="display: none;">
+    Este link expirou. Que pena, você chegou tarde demais.
+  </div>
+</div>
+
+
+
+
+
+<script>
+  function isExpired() {
+    const now = new Date();
+    const deadline = new Date("2025-08-03T23:59:59-03:00"); // ✅ ALTERE AQUI SE PRECISAR MUDAR
+    return now > deadline;
+  }
+
+  function showSectionOrExpire() {
+    const section = document.getElementById("section2");
+    const content = document.getElementById("contentArea");
+    const expired = document.getElementById("expiredMessage");
+
+    section.style.display = "block";
+    if (isExpired()) {
+      content.style.display = "none";
+      expired.style.display = "block";
+    }
+  }
+
+  function toggleDropdown(id, btn) {
+    const el = document.getElementById(id);
+    const isHidden = el.style.display === "none";
+    el.style.display = isHidden ? "block" : "none";
+    btn.innerHTML = (isHidden ? "▼" : "▶") + " " + btn.dataset.label;
+  }
+
+  document.getElementById("congressForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    let cpf = document.getElementById("cpf").value.trim();
+    cpf = cpf.replace(/[^\d]/g, '');
+    const termsChecked = document.getElementById("terms").checked;
+
+    if (!name || cpf.length !== 11 || !termsChecked) {
+      alert("Por favor, preencha todos os campos obrigatórios com dados válidos e aceite os termos.");
+      return;
+    }
+
+    document.getElementById("section1").style.display = "none";
+    showSectionOrExpire();
+  });
+</script>
+
+
