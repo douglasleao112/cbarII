@@ -3,15 +3,28 @@
     font-family: Arial, sans-serif;
   }
 
-  .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.05);
-  }
 
+
+  *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
   .form-container h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -41,10 +54,10 @@
 .dropdown-toggle {
   background-color: #27c61b;
   color: white;
-  padding: 12px 20px;
-  margin: 0 auto; /* remove margem superior e inferior */
-  border-radius: 0 0 12px 12px; /* encosta perfeitamente na imagem arredondada */
+  padding: 12px 16px;
+  margin: 0 auto 24px auto;
   border: none;
+  border-radius: 8px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -52,6 +65,7 @@
   max-width: 800px;
   text-align: center;
   transition: background 0.3s;
+  display: block;
 }
 
 .dropdown-toggle:hover {
@@ -93,12 +107,13 @@
     background-color: #20a216;
   }
 
-  .section-video {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 24px;
-    text-align: center;
-  }
+.section-video {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
 
 .section-video img {
   width: 100%;
@@ -108,23 +123,23 @@
   margin-bottom: 8px; /* espaçamento suave entre imagem e botão */
 }
 
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-bottom: 32px;
-  }
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 32px;
+}
 
-  .video-wrapper iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    top: 0;
-    left: 0;
-    border-radius: 12px;
-  }
 
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+}
   .divider {
     height: 3px;
     width: 100%;
@@ -140,6 +155,17 @@
     font-weight: bold;
     color: red;
   }
+
+  @media (max-width: 480px) {
+  .dropdown-toggle {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .form-container {
+    padding: 16px;
+  }
+}
 </style>
 
 <!-- SECTION 1 -->
