@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <title>Congresso CBAR</title>
   <style>
     body {
@@ -281,7 +282,36 @@
     document.getElementById("section1").style.display = "none";
     showSectionOrExpire();
   });
+
+
+
+
+  // Impede botão direito
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+
+  // Impede zoom com CTRL + rolagem
+  document.addEventListener("wheel", function(e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // Impede gesto de pinça
+  document.addEventListener("gesturestart", function(e) {
+    e.preventDefault();
+  });
+  document.addEventListener("gesturechange", function(e) {
+    e.preventDefault();
+  });
+  document.addEventListener("gestureend", function(e) {
+    e.preventDefault();
+  });
 </script>
+
+
+
 
 </body>
 </html>
